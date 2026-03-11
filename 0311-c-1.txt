@@ -1,0 +1,34 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    char n[30]; //여행지 이름 저장(문자열)
+    int d;
+    float c;
+    char g;
+    
+    printf("여행지 이름을 입력하세요:"); //화면 출력 f(서식)
+    //숫자-> 따옴표x, 문자-> 따옴표 o
+    scanf("%s", n); //키보드로 입력
+                    //문자열은 %s
+    printf("여행지 이름: %s\n", n);
+    
+    //&-> 주소 의미, scanf가 값을 받으면 주소를 찾아 이동할 수 있게함
+    //문자열은 & 사용 X -> 문자열명 자체가 주소임
+    
+    printf("여행 일수를 입력하세요:");
+    scanf("%d", &d); //%d는 정수
+    printf("여행 일수: %20d\n", d);
+    
+    printf("여행 경비를 입력하세요:");
+    scanf("%f", &c); //f: 실수
+    printf("여행 경비: %5.1f\n",c);
+   
+    printf("여행 등급을 입력하세요(A, B, C 중 한 글자):");
+    scanf(" %c",&g); //%c: 문자(한 글자)
+   //%c 앞에 공백주는 이유: 엔터키를 상쇄하기 위해
+    printf("여행 등급: %c\n", g);
+    
+    
+    return 0;
+}
