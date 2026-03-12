@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+     while(1)  //참일때 반복, 0-> 거짓(false) 1-> 참(true)
+             //무한반복, 반복하고 싶은 부분 중괄호로 묶기
+    {
+        printf("숫자를 입력하세요:");
+        scanf("%d",&n);
+    
+    
+        if(n==10)
+        {
+            printf("정답\n");
+            break; //while 끝(반복문 탈출)
+    
+        }
+    
+        else if(n>10) //조건 하나 더 추가
+        printf("너무 높음\n");
+    
+        else
+        printf("너무 낮음\n");
+    }
+    return 0;
+}
