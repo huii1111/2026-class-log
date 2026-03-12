@@ -1,0 +1,27 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    
+    int num;
+    
+    printf("숫자를 입력하세요:");
+    scanf("%d", &num);
+    
+    //if=조건문, 반드시 소괄호 필요
+    if(num%2 == 0) // if문 뒤에는 ; x -> 바로 끝나는게 아니고 뒤로 이어지기 때문.
+	//%는 나머지
+	//=은 대입연산자, ==는 등호,!=은 같지 않다
+    {
+        printf("짝수\n");
+        printf("2로 나눈 나머지가 0\n");
+    }
+    //수행할 문장이 2개 이상이면 중괄호 필요-> 어디서부터 어디까지가 한 문단인지 알려주기 위해
+
+    else
+  {
+      printf("홀수\n");
+      printf("2로 나눈 나머지가 1\n");
+  }    
+    return 0;
+}
