@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+   char b;
+   printf("혈액형 입력(A, B, O):");
+   scanf("%c",&b);
+   
+   //조건문 switch ~case
+   switch(b) //조건문은 세미콜론 X, 조건문이 어디까지인지 알려주기 위해 중괄호, case 뒤에는 콜론
+               //case를 선택해도 탈출 x 밑에도 다 출력함 -> break 필수
+   {
+     case 'A': //문자는 작은 따옴표
+        printf("A형 입니다.\n"); //case 1: printf(); 이 형식도 O
+        break; //case는 어짜피 case별로 찾아가기 때문에 중괄호 X
+     case 'B':
+        printf("B형 입니다.\n");
+        break;
+     case 'O':
+        printf("O형 입니다.\n");
+        break;
+        
+    default:
+        printf("입력 오류\n"); //마지막이니까 굳이 break X
+   }
+    return 0;
+}
