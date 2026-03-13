@@ -1,0 +1,52 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+   int n1, n2, sum, sub, mul;
+   double divi;
+   char op;
+   
+   printf("첫번째 숫자를 입력하세요.: ");
+   scanf("%d",&n1);
+   
+   printf("연산자를 입력하세요(+ - * /).:");
+   scanf(" %c",&op); //%c 앞에 한 칸 띄우는거 까먹기 XX
+   
+   printf("두번째 숫자를 입력하세요:");
+   scanf("%d",&n2);
+   
+   
+     if (op == '+') 
+        { 
+            sum = n1 + n2;
+            printf("%d", sum);
+        }    
+     else if (op == '-') 
+        {
+            sub = n1 - n2;
+            printf("%d", sub);
+        }
+     else if (op == '*') 
+        {
+            mul = n1 * n2;
+            printf("%d", mul);
+        }
+     else if (op == '/')
+        {
+            divi = (double)n1 / n2;
+            printf("%.2f", divi);
+        }
+        
+    else
+        printf("입력 오류\n"); 
+  
+    return 0;
+}
